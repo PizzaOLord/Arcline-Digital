@@ -1,9 +1,9 @@
 const BOOKING_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyX_CQhn6vNff_r65V0Re-fmD0zx8hr6w879w2rk5ZG0Z7qGcdJdFtyMCu37n5of_APvQ/exec';
 
 const plans = {
-  Starter: { current: '₹999', regular: '₹1,665' },
-  Business: { current: '₹1,499', regular: '₹2,499' },
-  Shop: { current: '₹2,599', regular: '₹4,332' },
+  Starter: { current: '₹499', regular: '₹999' },
+  Business: { current: '₹749', regular: '₹1,499' },
+  Shop: { current: '₹1,299', regular: '₹2,599' },
 };
 
 document.querySelectorAll('.plan-card').forEach((card) => {
@@ -12,7 +12,7 @@ document.querySelectorAll('.plan-card').forEach((card) => {
   const price = card.querySelector('.price');
   if (!plan || !price) return;
 
-  price.innerHTML = `<span class="regular-price">${plan.regular}</span><span class="current-price">${plan.current}</span><small>/ month</small><span class="discount-badge">40% off</span>`;
+  price.innerHTML = `<span class="regular-price">${plan.regular}</span><span class="current-price">${plan.current}</span><small>/ month</small><span class="discount-badge">50% off</span>`;
   const setup = card.querySelector('.setup');
   if (setup) setup.innerHTML = 'Setup fee: <small>discussed during consultation</small>';
 });
